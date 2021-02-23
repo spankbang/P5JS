@@ -1,32 +1,22 @@
-var spot = {
-    x: 100,
-    y:50
-}
-
-var col = {
-    r: 255,
-    g: 0,
-    b: 0
-}
-
 function setup() {
-    createCanvas(600, 600)
-    background(0)
+        createCanvas(600,600)
 }
 
-function draw() { 
+
+function draw() {
+     
+    background(0)
+    stroke(255)
+    strokeWeight(4)
+    noFill()
+
+    if (mouseX > 300) {
+        fill(255, 0, 200)
+    }
 
 
-    col.r = random(100, 255);
-    col.g = random(100, 255);
-    col.b = random(100, 255);
-
-
-    spot.x = random(0, width);
-    spot.y = random(0,height)
-
-    fill(col.r, col.g, col.b,100    );
-    noStroke()
-    ellipse(spot.x, spot.y, 24, 24);
+    ellipse(300, 200, 100, 100)
+    
+   
 
 }
