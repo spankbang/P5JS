@@ -1,50 +1,32 @@
-var col = 0;
-function setup() {
-    createCanvas(600,600)
+var spot = {
+    x: 100,
+    y:50
 }
 
-/**
+var col = {
+    r: 255,
+    g: 0,
+    b: 0
+}
+
+function setup() {
+    createCanvas(600, 600)
+    background(0)
+}
+
+function draw() { 
 
 
- function draw() {
-     col = map(mouseX, 0, 600, 0, 255);
-     background(col)
-
-     fill(250, 118, 222)
-     ellipse(mouseX, 200, 64, 64);
- }  
-
-        ||
-        ||
-        ||
-        ||   (explaination)
-       _||_
-        \/
+    col.r = random(100, 255);
+    col.g = random(100, 255);
+    col.b = random(100, 255);
 
 
- 
-    What does the map function does ?
-    => It takes the 5 arguments.
-     ex, map(a,b,c,d,e);
-     here ,
-            a       =>  The value with respect to !
-            b ,c    =>  The existed range
-            e,f     =>  The range in which we want to output !
-    
-    see this lecture , 
-    https: //youtu.be/nicMAoW6u1g?list=PLglp04UYZK_PrN6xWo_nJ-8kzyXDyFUwi
- 
-  
- */
+    spot.x = random(0, width);
+    spot.y = random(0,height)
 
- function draw() {
-     r = map(mouseX, 0, 600, 0, 255);
-     b = map(mouseX, 0, 600, 255, 0);
-     background(r,0,b)
+    fill(col.r, col.g, col.b,100    );
+    noStroke()
+    ellipse(spot.x, spot.y, 24, 24);
 
-     fill(250, 118, 222)
-     ellipse(mouseX, 200, 64, 64);
- }
-
-
- 
+}
