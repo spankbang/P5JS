@@ -1,11 +1,15 @@
-var circleX
+var circleObject = {
+    height: 20,
+    width: 20,
+}
 function setup() {
-    createCanvas(1920, 1080)
+    createCanvas(1920, 1000)
     background(196)
-    circleX = 50
 }
 
 function draw() {
-    ellipse(circleX, 100, 50, 100)
-    circleX = circleX + 10
+    ellipse(960, 540, circleObject.height, circleObject.width)
+    circleObject.height++
+     circleObject.width++
+    
 }   
