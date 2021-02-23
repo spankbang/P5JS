@@ -3,15 +3,25 @@ function setup() {
     createCanvas(600,600)
 }
 
-function draw() {
-    col = map(mouseX, 0, 600, 0, 255);
-    background(col)
-
-    fill(250, 118, 222)
-    ellipse(mouseX, 200, 64, 64);
-}
-
 /**
+
+
+ function draw() {
+     col = map(mouseX, 0, 600, 0, 255);
+     background(col)
+
+     fill(250, 118, 222)
+     ellipse(mouseX, 200, 64, 64);
+ }  
+
+        ||
+        ||
+        ||
+        ||   (explaination)
+       _||_
+        \/
+
+
  
     What does the map function does ?
     => It takes the 5 arguments.
@@ -26,3 +36,15 @@ function draw() {
  
   
  */
+
+ function draw() {
+     r = map(mouseX, 0, 600, 0, 255);
+     b = map(mouseX, 0, 600, 255, 0);
+     background(r,0,b)
+
+     fill(250, 118, 222)
+     ellipse(mouseX, 200, 64, 64);
+ }
+
+
+ 
